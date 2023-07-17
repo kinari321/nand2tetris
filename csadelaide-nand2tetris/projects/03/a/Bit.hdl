@@ -13,6 +13,8 @@ CHIP Bit {
     IN in, load;
     OUT out;
 
+    // 不正解. 
     PARTS:
-    // Put your code here:
+    Mux(a=gayout, b=in, sel=load, out=a);
+    DFF(in=a, out=gayout, out=out);
 }
